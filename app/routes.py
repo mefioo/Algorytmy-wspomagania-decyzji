@@ -6,3 +6,8 @@ from app import app
 @app.route('/main')
 def main():
     return render_template('main.html', title='Strona główna')
+
+@app.route('/contact')
+def contact():
+    return render_template('Contact.html', title='Kontakt')
+
