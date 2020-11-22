@@ -1,1 +1,80 @@
 {% extends "layout.html" %}
+<head>
+    <meta charset="utf-8" />
+    <style>
+        #container
+        {
+            width: 1000px;
+            min-height: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #About
+        {
+            text-align: center;
+        }
+        #import
+        {
+            padding: 10px;
+            width: 300px;
+            min-height: 40px;
+            border-collapse: collapse;
+            border: 5px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #FreeSpace
+        {
+            height: 50px;
+        }
+        #FreeSpace2
+        {
+            height: 200px;
+        }
+        #button
+        {
+            padding: 10px;
+            width: 100px;
+            height: 30px;
+            color: black;
+            text-align: center;
+            background-color: #0e90d2;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            border: 3px solid darkblue;
+            border-radius: 5px;
+        }
+        #rights
+        {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="About">
+            <h1>WPROWADZENIE</h1><br/><br/>
+            Witaj, ta aplikacja rozpoznaje rasę psa znajdującego się na twoim zdjęciu.<br/><br/>
+            W celu załadowania wybranego przez ciebie zdjęcia, skorzystaj z poniższego formularza.<br/><br/>
+            Po wybraniu pliku, kliknij przycisk PRZEŚLIJ aby rozpocząć proces rozpoznawania.<br/><br/><br/>
+            Dodatkowo w zakładce "Autorzy" znajdują się informacje o osobach tworzących ten projekt.<br/><br/>
+            Dziękujemy i życzymy udanej pracy z programem. :)<br/><br/><br/>
+        </div>
+        <div id="import">
+            <img src="wysylanie-pliku_318-10002.jpg" height="40px" width="40px" align="right" /><br/>
+            Wybierz plik z komputera.
+        </div>
+        <div id="FreeSpace"></div>
+        <div id="button">
+            <a class="brand" href="#">PRZEŚLIJ</a>
+        </div>
+        <div id="FreeSpace2"></div>
+        <div id="rights">
+            Wszelkie prawa zastrzeżone. Wrocław 2020
+        </div>
+
+    </div>
+</body>
