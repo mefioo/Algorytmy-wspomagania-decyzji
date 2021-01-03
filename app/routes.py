@@ -11,3 +11,6 @@ def main():
 def contact():
     return render_template('Contact.html', title='Kontakt')
 
+@app.route('/result')
+def result():
+    return render_template('result.html', title='Wynik')
