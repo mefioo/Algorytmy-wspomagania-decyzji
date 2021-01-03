@@ -62,6 +62,7 @@ history = model.fit(train_batches,
                     epochs=30,
                     validation_data=test_batches)
 
+
 model.save('modelDogsBreeds2.h5')
 
 plt.plot(history.history['accuracy'], label='Training accuracy')
