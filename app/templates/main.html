@@ -1,5 +1,101 @@
-{% extends "layout.html" %}
-{% block container %}
+<head>
+    <meta charset="utf-8" />
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .buttontest{
+          border: none;
+          color: white;
+          background-color: #0e90d2;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-left: 110px;
+          margin-top: 14px;
+          /* margin: 0px 0px; */
+          cursor: pointer;
+        }
+        .myinput{
+          margin-left: 55px;
+        }
+
+        body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+        #container
+        {
+            width: 1000px;
+            min-height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #About
+        {
+            text-align: center;
+        }
+        #import
+        {
+            padding: 15px;
+            width: 350px;
+            height: 86px;
+            border-collapse: collapse;
+            border: 5px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #FreeSpace
+        {
+            height: 50px;
+        }
+        #FreeSpace2
+        {
+            height: 200px;
+        }
+        #button
+        {
+            padding: 10px;
+            width: 300px;
+            height: 20px;
+            color: black;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+        }
+        #rights
+        {
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="{{ url_for('main') }}">Rozpoznawanie rasy psów</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="{{ url_for('main') }}" title="Import Your file">Start</a></li>
+              <li><a href="{{ url_for('contact') }}" title="About us">Autorzy</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="container">
         <div id="About">
             <h1>WPROWADZENIE</h1><br/><br/>
             Witaj, ta aplikacja rozpoznaje rasę psa znajdującego się na twoim zdjęciu.<br/><br/>
@@ -9,15 +105,18 @@
             Dziękujemy i życzymy udanej pracy z programem. :)<br/><br/><br/>
         </div>
         <div id="import">
-            <img src="wysylanie-pliku_318-10002.jpg" height="40px" width="40px" align="right" /><br/>
-            Wybierz plik z komputera.
+            <form method=post enctype=multipart/form-data name="uploadform">
+                <input class="myinput" type=file id="FILE" name=file>
+                <input class="buttontest" type=submit value=PRZEŚLIJ>
+            </form>
+
         </div>
+
         <div id="FreeSpace"></div>
-        <div id="button">
-            <a class="brand" href="#">PRZEŚLIJ</a>
-        </div>
-        <div id="FreeSpace2"></div>
+
         <div id="rights">
             Wszelkie prawa zastrzeżone. Wrocław 2020
         </div>
-{% endblock container %}
+
+    </div>
+</body>
